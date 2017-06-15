@@ -1,5 +1,25 @@
 <html>
-  <head></head>
+  <head>
+    <% if @way_too %>
+      <style>
+      body {
+        background: red;
+        }
+      </style>
+    <% elsif @wrong %>
+    <style>
+      body {
+        background: lightcoral;
+      }
+    </style>
+    <% elsif @correct %>
+    <style>
+      body {
+        background: green;
+      }
+    </style>
+    <% end %>
+  </head>
   <body>
     <form>
       <input type='text' name='guess' />
